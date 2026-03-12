@@ -19,7 +19,7 @@ val Typography = Typography(
     headlineMedium = TextStyle(
         fontFamily = interFontFamily,
         fontWeight = FontWeight.Bold,
-        fontSize = 24.sp,
+        fontSize = 16.sp,
         color = TextPrimary
     ),
     // textos normales (cuerpo)

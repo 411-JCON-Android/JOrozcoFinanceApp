@@ -15,7 +15,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.jorozcofinanceapp.components.HomeHeader
+import com.example.jorozcofinanceapp.components.SummaryCardsSection
+import com.example.jorozcofinanceapp.model.SummaryCard
 import com.example.jorozcofinanceapp.model.User
+import com.example.jorozcofinanceapp.ui.theme.CardActivityBg
+import com.example.jorozcofinanceapp.ui.theme.CardProfitsBg
+import com.example.jorozcofinanceapp.ui.theme.CardSalesBg
 import com.example.jorozcofinanceapp.ui.theme.JOrozcoFinanceAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,8 +31,13 @@ class MainActivity : ComponentActivity() {
             JOrozcoFinanceAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
-                    // Crear usuario
+                    // Crear cosas
                     val currentUser = User(name = "Juan", balance = 0.0)
+                    val summaryCards = listOf(
+                        SummaryCard("Actividad", 0.0, CardActivityBg), // No mostramos el monto en UI, pero la clase lo requiere
+                        SummaryCard("Ventas", 280.99, CardSalesBg),
+                        SummaryCard("Ganancias", 280.99, CardProfitsBg)
+                    )
 
                     Column(
                         modifier = Modifier
@@ -37,6 +47,7 @@ class MainActivity : ComponentActivity() {
                     ) {
                         // Llamar secciones
                         HomeHeader(user = currentUser)
+                        SummaryCardsSection(cards = summaryCards)
 
 
                     }
