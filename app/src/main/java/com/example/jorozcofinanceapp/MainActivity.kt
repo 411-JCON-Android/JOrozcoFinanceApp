@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
                     // Crear cosas
                     val currentUser = User(name = "Juan", balance = 0.0)
                     val summaryCards = listOf(
-                        SummaryCard("Actividad", 0.0, CardActivityBg), // no estoy muy seguro de si poner un número pq no viene en la foto, pero la clase lo usa así que lo dejo en 0
+                        SummaryCard("Actividad", 430.18, CardActivityBg), // no estoy muy seguro de si poner un número pq no viene en la foto, pero la clase lo usa así que lo dejo en 0
                         SummaryCard("Ventas", 320.43, CardSalesBg),
                         SummaryCard("Ganancias", 146.59, CardProfitsBg)
                     )

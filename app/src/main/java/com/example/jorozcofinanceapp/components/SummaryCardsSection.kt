@@ -69,6 +69,11 @@ fun SummaryCardsSection(cards: List<SummaryCard>) {
                     text = "de la Semana",
                     style = MaterialTheme.typography.bodyMedium
                 )
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = "$${cards[0].amount}",
+                    style = MaterialTheme.typography.headlineMedium
+                )
             }
         }
 
